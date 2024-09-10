@@ -1,0 +1,88 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Flexbox layout */
+#main-content {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+/* Left Column: Timer and News Log */
+#left-column {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+/* Box styles */
+.box {
+    background-color: #fff;
+    border: 1px solid black;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+/* Adjust Timer box to be smaller */
+#timer-box {
+    height: 120px;  /* Resize the timer box */
+}
+
+/* News Log to take up the remaining space */
+#news-log-box {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+/* Right: Prices box */
+#prices-box {
+    flex-basis: 20%;
+}
+
+/* Chart in the center */
+#chart-box {
+    flex-basis: 60%;
+    text-align: center;
+    margin: 0 10px;
+}
+
+/* Make the two charts fit inside the container */
+canvas {
+    width: 100% !important;
+    height: 250px !important; /* Adjust the height of the charts */
+    margin-bottom: 20px;
+}
+
+/* Reverse the order of messages in the News Log */
+.news-log {
+    margin-top: 10px;
+    overflow-y: auto;
+    border-top: 1px solid #000;
+    padding-top: 10px;
+}
+
+.news-log p {
+    margin: 0;
+}
+
+/* Styling for predictions */
+.predictions-header {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.predictions-list p {
+    margin: 5px 0;
+}

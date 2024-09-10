@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Ticker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="main-content">
+        <!-- Left: Timer and News Log -->
+        <div id="left-column">
+            <!-- Timer -->
+            <div class="box" id="timer-box">
+                <div class="timer-header"><b>Timer<hr></b></div>
+                <div class="timer-input">
+                    <label for="customTimer">Set Round Timer (seconds):</label>
+                    <input type="number" id="customTimer" min="1" value="30">
+                </div>
+                <button id="pauseButton">Pause</button>
+                <button id="saveGameButton">Save Game</button> <!-- Save Game Button -->
+                <button id="loadGameButton">Load Game</button> <!-- Load Game Button -->
+            </div>
+
+            <!-- News Log (under Timer) -->
+            <div id="news-log-box" class="box">
+                <div class="news-log-header"><strong>News Log</strong></div>
+                <div class="news-log" id="newsLog"></div>
+            </div>
+        </div>
+
+        <!-- Center: Stock Charts -->
+        <div class="box" id="chart-box">
+            <div class="chart-container">
+                <canvas id="allStocksChart"></canvas> <!-- Bar Chart -->
+                <canvas id="lineStocksChart"></canvas> <!-- Line Chart -->
+            </div>
+        </div>
+
+        <!-- Right: Current Stock Prices and Predictions -->
+        <div class="box" id="prices-box">
+            <div class="news-header"><b>Current Stock Prices<hr></b></div>
+            <div class="price-list" id="priceList">
+                <p>Gold: $<span id="goldPrice">10.00</span></p>
+                <p>Silver: $<span id="silverPrice">10.00</span></p>
+                <p>Oil: $<span id="oilPrice">10.00</span></p>
+                <p>Industrial: $<span id="industrialPrice">10.00</span></p>
+                <p>Bonds: $<span id="bondsPrice">10.00</span></p>
+                <p>Grain: $<span id="grainPrice">10.00</span></p>
+            </div>
+
+            <!-- Predictions Section -->
+            <div class="predictions-header"><b>Predictions<hr></b></div>
+            <div class="predictions-list" id="predictionsList">
+                <p>Loading predictions...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
